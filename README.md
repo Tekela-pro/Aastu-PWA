@@ -37,3 +37,12 @@ Upload the **contents** of this folder to the repository root, replacing the pre
 
 ## Backup warning
 Your records are stored in this browser on this device. Export a JSON backup regularly, especially before clearing browser data or switching devices.
+
+
+## Version 3 additions
+- Exam dates with countdowns, difficulty, preparation status, and topics to cover.
+- Rule-based study-plan recommendations for a chosen horizon (3, 7, or 14 days) and daily study-time budget (1–6 hours).
+- Recommendations prioritize nearer exams, higher difficulty, and lower preparation status, and use course confidence/weak topics.
+- This is an offline/local heuristic, not an AI service. It suggests blocks but does not automatically create tasks.
+
+After uploading, if the installed PWA shows the previous version, close it and reopen the website; the service worker cache name was updated to trigger a refresh. Export a JSON backup before replacing files.
