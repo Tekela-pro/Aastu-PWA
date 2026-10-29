@@ -1,27 +1,39 @@
-# AASTU Study Planner PWA — early development build
+# AASTU Study Planner PWA — Academic Engine Update
 
-## Working in this build
+An offline-first study planner for AASTU students. This version adds a stronger academic-record workflow while keeping the app static-hostable on GitHub Pages.
+
+## Included
 - Responsive dashboard and mobile navigation
-- Light/dark theme toggle
-- Offline-first local storage
-- Tasks: add, edit, complete, delete, priorities, due dates and estimates
-- Editable starter timetable
-- Course records, confidence/weak topics and weighted GPA estimate
-- Focus timer, manual session logging and distraction log
-- Weekly reflection
+- Light/dark theme
+- Offline-first local storage and service-worker app shell
+- Tasks: add, edit, complete, delete, priority, due date, time estimate
+- Editable starter timetable (verify all class times against the official timetable)
+- Semester creation, selection, and renaming
+- Courses with credits, confirmed grade points, projected grade points, confidence, and weak-topic notes
+- Assessment records per course: quiz, assignment, midterm, final, lab, project, or other; score, maximum score, weight, and optional date
+- Assessment-derived percentage and grade-point estimate when a confirmed grade point is not entered
+- Editable percentage-to-grade-point scale
+- Current semester weighted GPA and projected GPA
+- Focus timer, manual session logging, distraction log, and weekly reflection
 - JSON backup/restore and CSV task export
-- PWA manifest and service-worker app-shell caching
+- PWA manifest and service-worker caching
+
+## Important academic accuracy notes
+- The built-in grading scale is an **editable example**, not verified AASTU policy. Replace it with the official scale used by your courses before relying on assessment-derived grade points.
+- A manually entered confirmed grade point takes precedence over the assessment-derived estimate for that course.
+- Assessment percentages are calculated from the assessments entered so far, normalized by their entered weights. Add each assessment's actual course weight, and keep total weights at or below 100%.
+- GPA is weighted by the course credits you enter. Make sure credits, grade points, and semester assignments match your official records.
+- GPA projections are estimates, not guarantees. A blank projected grade uses the current grade estimate for that course.
+- Starter timetable entries are editable examples and should be checked against the official AASTU timetable.
 
 ## Not connected yet
-Google sign-in, cloud sync, AI API, push notifications, attachments, CSV import, printable reports, full semester archiving, assessment-weighted GPA projections and adaptive exam/recovery algorithms still need implementation. The app labels cloud/AI/push as unconfigured; do not treat this as production-ready or use it as the only copy of important records.
+Google sign-in, cloud sync, AI API, push notifications, file attachments, CSV import, printable reports, and advanced adaptive exam/recovery algorithms still require further development. GitHub Pages hosts only the static frontend; cloud features require external services. Do not put private API keys in frontend files.
 
 ## Run locally
-Run `python3 -m http.server 8080` in this folder, then open `http://localhost:8080`. Service workers require localhost or HTTPS; opening the HTML file directly will not enable the PWA offline layer.
+Run `python3 -m http.server 8080` in this folder, then open `http://localhost:8080`. Service workers require localhost or HTTPS; opening `index.html` directly will not enable the PWA offline layer.
 
-## Deploy frontend to GitHub Pages
-1. Create a repository and upload these files to its root.
-2. In Settings → Pages, publish the `main` branch root (or configure a GitHub Actions workflow).
-3. Open the resulting HTTPS URL and install from the browser menu on Android.
+## Deploy/update on GitHub Pages
+Upload the **contents** of this folder to the repository root, replacing the previous version. Keep `index.html`, `app.js`, `styles.css`, `sw.js`, `manifest.webmanifest`, and the `icons` folder together. In GitHub, commit the changed files. If the site appears unchanged, close and reopen it or refresh after the service-worker update.
 
-## Important
-GitHub Pages hosts only the frontend. Google authentication, cloud database, AI requests and push notifications require external backend services. Never put private API keys in frontend files. Local records are stored in this browser and can be lost if browser data is cleared; export JSON backups regularly.
+## Backup warning
+Your records are stored in this browser on this device. Export a JSON backup regularly, especially before clearing browser data or switching devices.
