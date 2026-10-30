@@ -51,3 +51,10 @@ After uploading, if the installed PWA shows the previous version, close it and r
 - Adds a “What do I need on remaining assessments?” calculator in Courses & GPA.
 - Uses assessment weights and recorded scores to calculate remaining course weight and the average needed to reach a chosen percentage target.
 - This is an estimate based on the assessment weights entered by the student; verify assessment weights and grading rules with AASTU instructors.
+
+
+## Version 5 additions
+- Weekly progress report for logged focus sessions, task activity, overdue tasks, and exams in the next seven days.
+- Missed-study recovery action creates new recovery tasks over the next three days for overdue unfinished tasks, while keeping original tasks intact. It avoids duplicating recovery tasks for the same original item.
+- Weekly task completion counts use completion date when available, or due date for older records that do not have completion timestamps; treat this as a useful local summary, not an audited report.
+- All data remains in local browser storage. Export a JSON backup regularly.

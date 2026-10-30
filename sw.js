@@ -1,4 +1,4 @@
-const CACHE = "aastu-planner-shell-v3";
+const CACHE = "aastu-planner-shell-v5";
 const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icons/icon-192.svg", "./icons/icon-512.svg"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)).then(() => self.skipWaiting()));
