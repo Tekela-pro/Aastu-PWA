@@ -58,3 +58,9 @@ After uploading, if the installed PWA shows the previous version, close it and r
 - Missed-study recovery action creates new recovery tasks over the next three days for overdue unfinished tasks, while keeping original tasks intact. It avoids duplicating recovery tasks for the same original item.
 - Weekly task completion counts use completion date when available, or due date for older records that do not have completion timestamps; treat this as a useful local summary, not an audited report.
 - All data remains in local browser storage. Export a JSON backup regularly.
+
+
+## Version 6 additions: materials and revision cards
+- Save resource titles, course names, types, optional HTTPS/HTTP links, and notes/file locations. The app does not upload or store attached files; keep files in your phone or chosen cloud drive and link them here.
+- Create question-and-answer revision cards, reveal answers, and mark cards as known or needing another review. A simple local schedule brings cards back the next day or after a longer interval.
+- Resources and revision cards are included in JSON backups and remain in local browser storage. They are not synchronized between devices.

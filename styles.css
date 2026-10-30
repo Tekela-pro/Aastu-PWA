@@ -11,3 +11,14 @@ body.dark{--bg:#101725;--surface:#182234;--text:#e9edf6;--muted:#a0abc0;--line:#
 /* Version 3: exam countdowns and rule-based study plans */
 .exam-item,.plan-item{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.exam-main,.plan-detail{flex:1;min-width:0}.exam-main strong,.exam-main small,.plan-detail strong,.plan-detail small{display:block}.exam-main strong,.plan-detail strong{font-size:12px}.exam-main small,.plan-detail small{font-size:10px;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}.plan-date{width:74px;flex-shrink:0;font-size:11px;font-weight:800;color:var(--accent)}.plan-duration{white-space:nowrap;font-size:11px;font-weight:800;background:var(--soft);color:var(--accent);border-radius:7px;padding:6px}.study-plan-list{display:block}.exam-item button{flex-shrink:0}
 @media(max-width:420px){.plan-item{gap:8px;align-items:flex-start}.plan-date{width:62px;font-size:10px}.plan-duration{font-size:10px;padding:5px}.exam-item{gap:6px}}
+
+/* Version 6: materials and revision cards */
+#materials .panel { margin-bottom: 18px; }
+#materials form { display: grid; gap: 12px; }
+#materials .panelhead input { max-width: 280px; }
+.revision-card { border: 1px solid var(--line, #dfe5ee); border-radius: 14px; padding: 16px; margin: 10px 0; background: var(--panel, #fff); }
+.revision-card p { line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.revision-card details { padding: 10px 0; }
+.revision-card summary { cursor: pointer; font-weight: 650; }
+.revision-card a { display: inline-block; margin-top: 6px; }
+@media (max-width: 650px) { #materials .panelhead { align-items: flex-start; flex-wrap: wrap; } #materials .panelhead input { max-width: 100%; width: 100%; } .revision-card { padding: 12px; } }
