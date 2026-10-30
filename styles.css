@@ -22,3 +22,5 @@ body.dark{--bg:#101725;--surface:#182234;--text:#e9edf6;--muted:#a0abc0;--line:#
 .revision-card summary { cursor: pointer; font-weight: 650; }
 .revision-card a { display: inline-block; margin-top: 6px; }
 @media (max-width: 650px) { #materials .panelhead { align-items: flex-start; flex-wrap: wrap; } #materials .panelhead input { max-width: 100%; width: 100%; } .revision-card { padding: 12px; } }
+
+.quiz-options{display:grid;gap:8px;margin-top:12px}.quiz-option{display:flex;align-items:flex-start;gap:8px;padding:10px;border:1px solid var(--line);border-radius:10px}.quiz-option input{margin-top:4px}.quiz-correct{color:#16803d;font-weight:700}.quiz-wrong{color:#b42318;font-weight:700}
