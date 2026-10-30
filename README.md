@@ -46,3 +46,8 @@ Your records are stored in this browser on this device. Export a JSON backup reg
 - This is an offline/local heuristic, not an AI service. It suggests blocks but does not automatically create tasks.
 
 After uploading, if the installed PWA shows the previous version, close it and reopen the website; the service worker cache name was updated to trigger a refresh. Export a JSON backup before replacing files.
+
+## Version 4 additions
+- Adds a “What do I need on remaining assessments?” calculator in Courses & GPA.
+- Uses assessment weights and recorded scores to calculate remaining course weight and the average needed to reach a chosen percentage target.
+- This is an estimate based on the assessment weights entered by the student; verify assessment weights and grading rules with AASTU instructors.
